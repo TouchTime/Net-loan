@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .annulus{
+           width: 3.8rem;
+           height: 3.8rem;
+        }
+        .annulus-c{
+            stroke-dasharray: 300px;
+            stroke-dashoffset: 546px;
+        }
+        .score-info{
+            margin-top: -3rem;
+            font-size: .5rem;
+            /* margin-left: 1.1rem; */
+            text-align: center;
+        }
+        .score-info-percent{
+            font-size: .75rem;
+        
+            color:#fe720f;
+        }
+        .score-info-text{
+            color:#b4b4b4;
+        }
+    </style>
+</head>
+<body>
+    <div class="annulus">
+        <svg viewBox="0 0 100 100">
+            <defs>
+            <pattern id="fill-img" patternUnits="userSpaceOnUse" width="100" height="100">
+                <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRFNkNCQzRGNzM2RjExRTc5REYzRkVDRTJERTdCMDgxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRFNkNCQzUwNzM2RjExRTc5REYzRkVDRTJERTdCMDgxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEU2Q0JDNEQ3MzZGMTFFNzlERjNGRUNFMkRFN0IwODEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEU2Q0JDNEU3MzZGMTFFNzlERjNGRUNFMkRFN0IwODEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4OFsYMAAABFFBMVEX9bTP9xTP9bjP9xDP9wzP9bzP9xjP9wjP9cDP9cTP9wTP9wDP9cjP9vzP9vTP9czP9uzP9dTP9vjP9dDP9djP9dzP9vDP9ezP9eTP9bDP9uTP9eDP9ujP9uDP9tjP9tzP9ejP9fDP9sTP9tTP9fTP9fzP9mjP9szP9fjP9tDP9gjP9hTP9gzP9lDP9rTP9gTP9qzP9rjP9sjP9rzP9nTP9rDP9hDP9qjP9pDP9iTP9iDP9gDP9hzP9mDP9pzP9jDP9sDP9oTP9jTP9lzP9ijP9qDP9pTP9nzP9jjP9jzP9hjP9kTP9njP9kzP9ozP9qTP9oDP9kjP9kDP9nDP9ojP9lTP9mzP9ljP9pjP9izP9mTMAAACqSaftAAAAXHRSTlP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AINtF+AAAAPDSURBVHja7NppUxoxGMDxVaEeKCqHWlDrVXuKUgXFqni0qOB9os/3/x7N8SSbhezFZjvjjP/Xm/wmAZbZnVgQvL6+D7SPJMuyQgwMeO1AH0tFSP39xpABmgtCM4AkEgO2IhBLQZLJZDQkQXNF+gWSTA71jAwOJmzF3i8tMjTUEzJI80eSAvFgXJGRMAgzhodDIiMjHHEqjoEaxI2x3IwR51L0ozsNF0WHpFIdiNc3x4mMjo4GQ1Iph+L/W3MYOsXSGrYS7L7hQMb9kbExBQl+D1SM8XE/ZGxMUULcaEExuhSr2xAKhExBsl5IJmMrEDrbyGbdkUwGlV4IxgjDqVgdBirQY9LITuqRdFoqAL0rnCC5IMhEMACkoUXSaaEARFSYMZnrRqamhAIRE0Yup0FQgcgh0Y1MsYwhuZyqIDIxIRQwEBr5fL4DQQWMhIQTmWAZRfJ5W1ERwoChkCgWbWR2dpYjACaVIk1FOGMSKRY1CGHAYGjMCKRQQMU0MkOTSIE5YDROCKSAGUbQmFlgyJxQYkAWSBwhmTeIssCTCM00sqAgc7Ei0ySCfCLFYQBMY4jQ3jSyuEiQ+fnYkEUeWPMi88iiyIrPkMqKtRwjsoJZy9g74tVXzPqGvSNefcasL9g74tVvzPqF/RckBmV9fR0R4MTSUiwIi/yfLGFvFPlOciCHh/EgNIocYqaNnwoCaGwaR2jUEMgmKRaExJFNzKxRrVYVBIly2TjCHf4QxISyaeQHV6r4pFXGSkYNkopwpVQyjlAHFKTEMmc0m02uSIQLpUrFKMIZ+7UHJyrmlL29JmdARRhR2dgwZewho76KQsIUsruLDHQgG6xtMwYqe87Xg9zYJkU3arVdZDreQYIwrk0gqEA3ss2M68jKn1oNmS4EhHH9N6JB4gp0I4AEKYrx8iIU0CLCODjo3ai/SEWLgDR6V+p1qYAeAWm0270Zx3WpgBsC0mg3GuGJs+NjqYA7ArbR2AltnNkKeCEgjcbOTijm/JwjTAFvBKjR5sbVVXDj7lxRwA8Bxbh6eAhGtO7uFAX8EUCDI0dH/sRtq9ViCFcgCALKQghydHPjJVxe3nIEl3IGwRAAp3FzenqhF9bW1iiiKNrLXI4vOJBTglxsbW3dq1ecPD8/PjJEXQqEQQAcC0Hk/ulpdXX19XV//+SEIY+IoOI2l/uREsduUeReiyj7BeERAHUhHcg+RZT9IorHRN7HfDp2ywPxnMb3wJJciBbhit8cAY5e2ciTisgPxX+GgIfI3JBgo8OcanMiIQb+E2AACCoOf5FiedcAAAAASUVORK5CYII="
+                x="0" y="0" width="100%" height="100%"  transform="rotate(0 0 0)">
+                </image>
+            </pattern>
+            </defs>
+            <path d="M 50 50 m 0 -47 a 47 47 0 1 1 0 94 a 47 47 0 1 1 0 -94" stroke="#e5e9f2" stroke-width="4.8" fill="none" class="el-progress-circle__track"></path>
+            <path d="M 50 50 m 0 -47 a 47 47 0 1 1 0 94 a 47 47 0 1 1 0 -94" stroke-linecap="round" stroke="url(#fill-img)"  stroke-width="4.8" fill="none" class="el-progress-circle__path annulus-c"></path>
+        </svg>
+        <div class="score-info">
+            <div class="score-info-percent">100%</div>
+            <div class="score-info-text">好评率</div>
+        </div>
+    </div>
+    <script type='text/javascript' src='reponse.js' charset='utf-8'></script>
+</body>
+</html>

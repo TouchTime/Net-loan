@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+</head>
+<body>
+   <div class="page-group">
+       <div class="page page-current" id="router">
+           <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <!-- <a class="icon icon-me pull-left open-panel"></a>
+            <button class="button pull-left">按钮</button>
+            <button class="button pull-right">按钮</button> -->
+            <!-- <a href="" class="icon icon-left pull-left"></a> -->
+            <!-- <a href="" class="icon icon-right pull-right"></a> -->
+            <!-- <button class="button button-link button-nav pull-left">
+                    <span class="icon icon-left"></span>
+                    返回
+                </button>
+            <button class="button button-link button-nav pull-right">
+                下一步
+                <span class="icon icon-right"></span>
+            </button>
+              <h1 class="title">标题</h1> -->
+            <button class="button pull-left">left</button>
+            <button class="button pull-right">right</button>
+            <div class="buttons-row">
+                <a href="#tab1" class="tab-link active button">Tab1</a>
+                <a href="#tab2" class="tab-link button">Tab2</a>
+                <a href="#tab3" class="tab-link button">Tab3</a>
+            </div> 
+        </header>
+
+            <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external active" href="tab.html">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">首页</span>
+                <span class="badge">2</span>
+            </a>
+            <a class="tab-item external" href="table.html">
+                <span class="icon icon-star"></span>
+                <span class="tab-label">收藏</span>
+            </a>
+            <a class="tab-item external" href="scroll.html">
+                <span class="icon icon-settings"></span>
+                <span class="tab-label">设置</span>
+            </a>
+        </nav>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="content-padded">
+               <h1>标题一</h1>
+               <h2>标题一</h2>
+               <h3>标题一</h3>
+               <h4>标题一</h4>
+            </div>
+
+            <div class="content-block">
+                <p><a href="#" class="button">button</a></p>
+                <p><a href="#" class="button button-light">button-light</a></p>
+                <p><a href="#" class="button button-dark button-fill">dark</a></p>
+                <p><a href="#" class="button button-success">success</a></p>
+                <p><a href="#" class="button button-danger">danger</a></p>
+                <p><a href="#" class="button button-warning">warning</a></p>
+                <p><a href="#" class="button disabled">disabled</a></p>
+            </div>
+            <div class="content-block">
+                <ul>
+                    <li><a href="ajax.html">ajax加载新页面</a></li>
+                    <li><a href="#router3">内联页面</a></li>
+                </ul>
+            </div>
+        </div>
+       </div>
+
+       <div class="page" id="router3">
+           <header class="bar bar-nav">
+               <a class="button button-link button-nav pull-left back" href="#router">
+                    <span class="icon icon-left"></span>
+                    返回
+               </a>
+               <h1 class="title">路由</h1>
+           </header>
+           <div class="content">
+               <div class="content-block">
+                   这是内联编写的页面<a href="#" class="back">返回</a>按钮返回上一页
+               </div>
+           </div>
+       </div>
+
+        <!-- 其他的单个page内联页（如果有） -->
+        <div class="page">...</div>
+   </div>
+   <!-- popup, panel 等放在这里 -->
+   <div class="panel-overlay"></div> 
+   <!-- Left Panel with Reveal effect -->
+   <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>这是一个侧边栏</p>
+            <p></p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="#" class="close-panel">关闭</a></p>
+        </div>
+   </div>
+
+
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+   <!-- <script>$.init()</script> -->
+</body>
+</html>

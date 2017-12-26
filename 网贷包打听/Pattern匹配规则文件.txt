@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- XML文件需以utf-8编码 -->
+<urlset>
+    <url>
+        <!-- 必填,是具体某个链接的定义入口，每一条数据都要用<url>和</url>包含在其中 -->
+        <loc>http://www.wangdaibdt.com</loc>
+        <!-- 必填,pattern适用的站点频道,长度不得超过256字节 -->
+        <data>
+            <!-- 必填-->
+            <display>
+                <!-- 必填，所有映射规则和适用版本都要用<display>和</display>包含在其中-->
+                <pc_url_pattern>http://www.wangdaibdt.com/(\w+)/(\d+)\.html</pc_url_pattern>
+                <!-- 必填，填写pc待映射页面的url或urlpattern-->
+                <url_pattern>http://m.wangdaibdt.com/(\w+)/(\d+).html</url_pattern>
+                <!-- 必填，填写映射到的wap站页面的url或urlpattern-->
+                <pc_sample>http://www.wangdaibdt.com/dinaping/1.html</pc_sample>
+                <!-- 必填，给出1个能适用此映射规则的WEB URL示例-->
+                <wap_sample>http://m.wangdaibdt.com/dianping/1.html</wap_sample>
+                <!-- 必填，给出1个能适用此映射规则的WAP URL示例-->
+                <version>7</version>
+                <!-- 必填，填写映射规则适合的版本:1只适用于简版，2只适用于彩版 -->
+                <!-- 5只适用于移动版，6适用于彩版和移动版，7适用于简版、彩版、移动版 -->
+            </display>
+        </data>
+    </url>
+    <!-- 另一条数据 -->
+	<url>
+           <!-- 必填,是具体某个链接的定义入口，每一条数据都要用<url>和</url>包含在其中 -->
+           <loc>http://www.wangdaibdt.com</loc>
+           <!-- 必填,pattern适用的站点频道,长度不得超过256字节 -->
+        <data>
+            <!-- 必填-->
+            <display>
+                <!-- 必填，所有映射规则和适用版本都要用<display>和</display>包含在其中-->
+                <pc_url_pattern>http://www.wangdaibdt.com/(\w+)\.html</pc_url_pattern>
+                <!-- 必填，填写pc待映射页面的url或urlpattern-->
+                <url_pattern>http://m.wangdaibdt.com/${1}.html</url_pattern>
+                <!-- 必填，填写映射到的wap站页面的url或urlpattern-->
+                <pc_sample>http://www.wangdaibdt.com/hongbao.html</pc_sample>
+                <!-- 必填，给出1个能适用此映射规则的WEB URL示例-->
+                <wap_sample>http://m.wangdaibdt.com/hongbao.html</wap_sample>
+                <!-- 必填，给出1个能适用此映射规则的WAP URL示例-->
+                <version>7</version>
+                <!-- 必填，填写映射规则适合的版本:1只适用于简版，2只适用于彩版 -->
+                <!-- 5只适用于移动版，6适用于彩版和移动版，7适用于简版、彩版、移动版 -->
+            </display>
+        </data>
+    </url>
+    <!-- 另一条数据 -->
+	<url>
+           <!-- 必填,是具体某个链接的定义入口，每一条数据都要用<url>和</url>包含在其中 -->
+           <loc>http://www.wangdaibdt.com</loc>
+           <!-- 必填,pattern适用的站点频道,长度不得超过256字节 -->
+        <data>
+            <!-- 必填-->
+            <display>
+                <!-- 必填，所有映射规则和适用版本都要用<display>和</display>包含在其中-->
+                <pc_url_pattern>http://www.wangdaibdt.com/(\w+)\.html</pc_url_pattern>
+                <!-- 必填，填写pc待映射页面的url或urlpattern-->
+                <url_pattern>http://m.wangdaibdt.com/${1}.html?isApp=false</url_pattern>
+                <!-- 必填，填写映射到的wap站页面的url或urlpattern-->
+                <pc_sample>http://www.wangdaibdt.com/newestMessage.html</pc_sample>
+                <!-- 必填，给出1个能适用此映射规则的WEB URL示例-->
+                <wap_sample>http://m.wangdaibdt.com/newestMessage.html?isApp=false</wap_sample>
+                <!-- 必填，给出1个能适用此映射规则的WAP URL示例-->
+                <version>7</version>
+                <!-- 必填，填写映射规则适合的版本:1只适用于简版，2只适用于彩版 -->
+                <!-- 5只适用于移动版，6适用于彩版和移动版，7适用于简版、彩版、移动版 -->
+            </display>
+        </data>
+    </url>
+    <!-- 另一条数据 -->
+	<url>
+           <!-- 必填,是具体某个链接的定义入口，每一条数据都要用<url>和</url>包含在其中 -->
+           <loc>http://www.wangdaibdt.com</loc>
+           <!-- 必填,pattern适用的站点频道,长度不得超过256字节 -->
+        <data>
+            <!-- 必填-->
+            <display>
+                <!-- 必填，所有映射规则和适用版本都要用<display>和</display>包含在其中-->
+                <pc_url_pattern>http://www.wangdaibdt.com/near\.html\?str=(^[a-zA-Z0-9_\u4e00-\u9fa5]+$)</pc_url_pattern>
+                <!-- 必填，填写pc待映射页面的url或urlpattern-->
+                <url_pattern>http://m.wangdaibdt.com/near.html?str=${1}</url_pattern>
+                <!-- 必填，填写映射到的wap站页面的url或urlpattern-->
+                <pc_sample>http://www.wangdaibdt.com/near.html?str=1</pc_sample>
+                <!-- 必填，给出1个能适用此映射规则的WEB URL示例-->
+                <wap_sample>http://m.wangdaibdt.com/near.html?str=1</wap_sample>
+                <!-- 必填，给出1个能适用此映射规则的WAP URL示例-->
+                <version>7</version>
+                <!-- 必填，填写映射规则适合的版本:1只适用于简版，2只适用于彩版 -->
+                <!-- 5只适用于移动版，6适用于彩版和移动版，7适用于简版、彩版、移动版 -->
+            </display>
+        </data>
+    </url>
+    <!-- 另一条数据 -->
+	<url>
+           <!-- 必填,是具体某个链接的定义入口，每一条数据都要用<url>和</url>包含在其中 -->
+           <loc>http://www.wangdaibdt.com</loc>
+           <!-- 必填,pattern适用的站点频道,长度不得超过256字节 -->
+        <data>
+            <!-- 必填-->
+            <display>
+                <!-- 必填，所有映射规则和适用版本都要用<display>和</display>包含在其中-->
+                <pc_url_pattern>http://www.wangdaibdt.com/about_(\w+)\.html</pc_url_pattern>
+                <!-- 必填，填写pc待映射页面的url或urlpattern-->
+                <url_pattern>http://m.wangdaibdt.com/about_${1}.html}</url_pattern>
+                <!-- 必填，填写映射到的wap站页面的url或urlpattern-->
+                <pc_sample>http://www.wangdaibdt.com/about_us.html</pc_sample>
+                <!-- 必填，给出1个能适用此映射规则的WEB URL示例-->
+                <wap_sample>http://m.wangdaibdt.com/about_us.html</wap_sample>
+                <!-- 必填，给出1个能适用此映射规则的WAP URL示例-->
+                <version>7</version>
+                <!-- 必填，填写映射规则适合的版本:1只适用于简版，2只适用于彩版 -->
+                <!-- 5只适用于移动版，6适用于彩版和移动版，7适用于简版、彩版、移动版 -->
+            </display>
+        </data>
+    </url>
+</urlset> 

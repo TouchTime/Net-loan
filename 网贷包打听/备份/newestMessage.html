@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网贷包打听-网贷琅琊阁_最快最全的P2P网贷查询平台</title>
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta name="keywords" content="P2P网贷,P2P理财,P2P网贷平台排名,网贷平台">
+    <meta name="description" content="网贷包打听是一家专注P2P网贷理财行业的查询网站，旨在为用户提供最快最全的P2P网贷查询服务，网贷平台、网贷行业实时资讯一手掌握，为您的理财投资之路保驾护航。">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="http://m.sui.taobao.org/favicon.ico">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="/bdt/mobile/main.css">
+    <link rel="stylesheet" href="/bdt/mobile/sm.css">
+</head>
+<body class="information">
+   <div class="page-group">
+       <div class="page page-current">
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <div class="content-padded">
+                    <div class="rowPic">
+                        <img src="/bdt/mobile/images/informations.png" alt="情报banner" class="indexImg">
+                        <div class="seeAll">
+                            <img src="/bdt/mobile/images/show.png" alt="查看全部图标" class="show">
+                        </div>
+                      
+                    </div>
+                    <div class="showNav">
+                        <div class="bar bar-tab navation">
+                            <a class="tab-item external " href="http://m.wangdaibdt.com/">
+                                <span class="icon"><img src="/bdt/mobile/images/indexOld.png" alt="打听图标"></span>
+                                <span class="tab-label">打听</span>
+                            </a>
+                            <a class="tab-item external active" href="newestMessage.html?isApp=false">
+                                <span class="icon"><img src="/bdt/mobile/images/messageNew.png" alt="情报图标"></span>
+                                <span class="tab-label">情报</span>
+                            </a>
+                            <a class="tab-item external form" href="plateform.html">
+                                <span class="icon"><img src="/bdt/mobile/images/platform.png" alt="平台图标"></span>
+                                <span class="tab-label">平台</span>
+                            </a>
+                            <a class="tab-item external" href="/articleList.html?isApp=false">
+                                <span class="icon"><img src="/bdt/mobile/images/find.png" alt="发现图标"></span>
+                                <span class="tab-label">发现</span>
+                            </a>
+                            <a class="tab-item external" href="more.html">
+                                <span class="icon"><img src="/bdt/mobile/images/more.png" alt="更多图标"></span>
+                                <span class="tab-label">更多</span>
+                            </a>
+                    </div>
+                    <div class="upImg">
+                        <img src="/bdt/mobile/images/up.png" alt="关闭导航栏图标" >
+                    </div>
+                </div>
+            </div>
+            <div class="content-padded newsList">
+                <div class="row titles">
+                    <div class="col-70">过去48小时热门情报平台</div>
+                    <div class="col-30 todayTime"></div>
+                </div>
+                <div class="row contList">
+                    <foreach name="newestMessage1" item="vo">
+                        <a class="col-50">
+                            <span>{$vo.id}</span>
+                            <i>{$vo.pname}</i>
+                            <p>{$vo.nums}条情报</p>
+                        </a>
+                    </foreach>
+                    
+                </div>
+                <div class="line"></div>
+                <div class="row titles news">
+                    <div class="col-70">最新情报</div>
+                </div>
+                <div class="row titles newsTitle">
+                        <!-- <p class="col-100">草根投资活期赎回需要多长时间提现需要多长时间</p>
+                        <div class="newsTime">2017-08-14&middot;草根金服</div>
+                        <p class="col-100">妙资金融被经侦，泰然金融逾期雷（周一大户去现场要钱），下一个平台会是谁呢？</p>
+                        <div class="newsTime">2017-08-14&middot;妙资金融</div>
+                        <p class="col-100">草根投资活期赎回需要多长时间提现需要多长时间hahhah哈哈哈哈哈哈哈哈哈</p>
+                        <div class="newsTime">2017-08-14&middot;草根金服</div> -->
+                </div>
+               
+            
+                
+            </div>         
+            </div>
+        </div>
+   </div>
+  
+ 
+
+   
+   <script type='text/javascript' src='/bdt/mobile/reponse.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+   <script>
+     $(function(){
+         $('.show').click(function(){
+            $('.newsList').css('margin-top','4.175'+'rem');
+             $('.showNav').show();
+         })
+         $('.upImg img').click(function(){
+            $('.showNav').hide();
+            $('.newsList').css('margin-top','1'+'rem');
+         })
+
+         //48小时最新情报时间显示
+         function getNowFormatDate() {
+            var date = new Date();
+            var seperator1 = "-";
+            var seperator2 = ":";
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            if (strDate >= 0 && strDate <= 9) {
+                strDate = "0" + strDate;
+            }
+            var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+                    + " " +'更新';
+             $('.todayTime').html(currentdate);
+        }
+        getNowFormatDate();
+        
+        //8条最新情报
+        news();
+        function news(){
+        $('.contList a').on('click',function(){
+            var str = $(this).find('i')[0].innerHTML;
+              $.ajax({
+                type: "POST", 
+                url: "http://m.wangdaibdt.com/index_pc.php/Main/ptSearch_b",
+                data:{str:str},
+                success: function(data) {
+                    console.log(data)
+                if(data.r==1){ 
+                  if(data.data){  
+                        var data = data.data;
+                        if(data[0].name == str){
+                            window.location.href = "http://m.wangdaibdt.com/pinfo/"+data[0].ptid+".html";
+                        }
+                }else{
+                     //没有数据
+                    window.location.href = "http://m.wangdaibdt.com/near.html?str=" + str ;
+                 }
+                  
+                }else{ 
+                    $.toast('操作失败');
+                    $.init();
+                } 
+                } 
+              })
+        })
+        }
+
+      
+            //滚动加载
+          refresh();
+          function refresh(){
+            var divDom = document.createElement("div");
+            divDom.innerHTML= '<?php  echo  $newestMessage2 ;?>';
+            var liDom = divDom.querySelectorAll("li")
+            var dataLists = [];
+            var liHtml='';
+            for(var i=0; i<liDom.length; i++){
+                dataLists[i] = {};
+                dataLists[i].name = liDom[i].children[0].innerText;
+                dataLists[i].title = liDom[i].children[1].innerText;
+                dataLists[i].href = liDom[i].children[1].href;
+                dataLists[i].time = liDom[i].children[2].innerText;
+            }
+            for(var j=0;j<dataLists.length;j++){
+                // liHtml += '<a target="_blank" href="' + dataLists[j]["href"] + '">';
+                liHtml += '<a target="_blank" class="tab-item external" href="' + dataLists[j]["href"] + '"><p class="col-100">' + dataLists[j]["title"] + '</p>';
+                liHtml += '<div class="newsTime">' + dataLists[j]["time"] + '&middot;'+dataLists[j]["name"]+'</div></a>';    
+            }
+            $('.newsTitle').append(liHtml);
+          }
+          UniqueStyle();
+          function UniqueStyle(){
+            if(localStorage.getItem(localStorage.key(0))){
+             var array =localStorage.getItem(localStorage.key(0));
+         console.log(arrays)
+         var arrays = array.substr(1);
+        var arrayss = arrays.split(',').reverse();
+        Array.prototype.unique = function(){
+            var res = [];
+            var json = {};
+            for(var i = 0; i < this.length; i++){
+             if(!json[this[i]]){
+              res.push(this[i]);
+              json[this[i]] = 1;
+             }
+            }
+            return res;
+           }
+
+           if(arrayss.length>10){
+            console.log(arrayss)
+            var news= arrayss.unique().slice(0,10);
+            console.log('arrayss',arrayss.unique().slice(11))
+            console.log(news)
+            var lists = news.join(',');
+        }else{
+            var lists=arrayss.unique().join(',');
+        }
+         console.log(lists)
+         var locations = 'http://m.wangdaibdt.com/plateform.html?ptid='+lists
+             $('.showNav .form').attr('href',locations)
+           }
+          }
+
+           isApp();
+       function isApp(){
+        if(location.href.split('?')[1] == 'isApp=true'){
+             $('.rowPic').hide();
+            
+        }
+       }  
+     
+     })
+   </script>
+</body>
+</html>

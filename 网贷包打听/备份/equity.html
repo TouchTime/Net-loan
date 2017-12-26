@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网贷包打听-网贷琅琊阁_最快最全的P2P网贷查询平台</title>
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta name="keywords" content="P2P网贷,P2P理财,P2P网贷平台排名,网贷平台">
+    <meta name="description" content="网贷包打听是一家专注P2P网贷理财行业的查询网站，旨在为用户提供最快最全的P2P网贷查询服务，网贷平台、网贷行业实时资讯一手掌握，为您的理财投资之路保驾护航。">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="http://m.sui.taobao.org/favicon.ico">
+    <link rel="stylesheet" href="/bdt/mobile/sm.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="/bdt/mobile/main.css">
+</head>
+<body class="equity">
+   <div class="page-group">
+       <div class="page page-current">
+           <header class="bar bar-nav">
+               <a class="icon icon-left pull-left open-panel back" href="javascript:history.go(-1)"></a>
+               <div class="title">股权结构</div>
+           </header>
+            <!-- 这里是页面内容区 -->
+            <div class="content structure">
+               <div class="controler">
+                <span>{$equity.name}</span>
+                <span>疑似实际控制人</span>
+                <!-- <span>(持股比例 <i>60.1098%</i>)</span> -->
+                <div class="name">{$equity.bigBoss}</div>
+            </div>
+            <empty name="equity.bossList">
+                <div class="no_dates">
+                    此数据正在收集当中
+                </div>
+            <else/>
+            <div class="label">标注<img src="/bdt/mobile/images/important.png" alt="标注">为疑似实际股权控制人</div>
+            <volist name="equity.bossList" id="vo">
+                <div class="super">
+                    <div class="company company1">
+                        <span class="figure"></span>
+                        <span class="first_firm">{$vo.name}
+                            <switch name="vo['background']">
+                                <case value="1"><i>(银行)</i></case>
+                                <case value="2"><i>(上市)</i></case>
+                                <case value="3"><i>(国资)</i></case>
+                                <case value="4"><i>(风投)</i></case>
+                            </switch>
+                        <!-- <i>(上市)</i> -->
+                        <eq name="equity.bigBoss" value="$vo.name">
+                            <img src="/bdt/mobile/images/important.png" alt="标注">
+                        </eq>
+                        </span>
+                        <p>持股比例:<notempty name="vo.number"><i>{$vo.number}%</i></notempty></p>
+                        <notempty name="vo.child">
+                            <div class="blocks">
+                                <i class="exchange"></i>
+                            </div>
+                        </notempty>
+                    </div>
+                    <volist name="vo.child" id="vo1">
+                        <div class="degree2">
+                            <div class="company company2">
+                                <span class="figure"></span>
+                                <span class="first_firm">{$vo1.name}
+                                <switch name="vo1['background']">
+                                    <case value="1"><i>(银行)</i></case>
+                                    <case value="2"><i>(上市)</i></case>
+                                    <case value="3"><i>(国资)</i></case>
+                                    <case value="4"><i>(风投)</i></case>
+                                </switch>
+                                <!-- <i>(上市)</i> -->
+                            
+                                <eq name="equity.bigBoss" value="$vo1.name">
+                                    <img src="/bdt/mobile/images/important.png" alt="标注">
+                                </eq>
+                                </span>
+                                <p>持股比例:<notempty name="vo1.number"><i>{$vo1.number}%</i></notempty></p>
+                                <notempty name="vo1.child">
+                                    <div class="blocks">
+                                        <i class="exchange"></i>
+                                    </div>
+                                </notempty>
+                            </div>
+                            <volist name="vo1.child" id="vo2">
+                                <div class="degree3">
+                                    <div class="company company3">
+                                        <span class="figure"></span>
+                                        <span class="first_firm">{$vo2.name}
+                                        <switch name="vo2['background']">
+                                            <case value="1"><i>(银行)</i></case>
+                                            <case value="2"><i>(上市)</i></case>
+                                            <case value="3"><i>(国资)</i></case>
+                                            <case value="4"><i>(风投)</i></case>
+                                        </switch>
+                                        <!-- <i>(上市)</i> -->
+                                        <eq name="equity.bigBoss" value="$vo2.name">
+                                            <img src="/bdt/mobile/images/important.png" alt="标注">
+                                        </eq>
+                                        </span>
+                                        <p>持股比例:<notempty name="vo2.number"><i>{$vo2.number}%</i></notempty></p>
+                                        <notempty name="vo2.child">
+                                            <div class="blocks">
+                                                <i class="exchange"></i>
+                                            </div>
+                                        </notempty>
+                                    </div>
+                            
+                                <volist name="vo2.child" id="vo3">    
+                                <div class="degree4">
+                                    <div class="company company4">
+                                            <span class="figure"></span>
+                                            <span class="first_firm">{$vo3.name}
+                                            <switch name="vo3['background']">
+                                                <case value="1"><i>(银行)</i></case>
+                                                <case value="2"><i>(上市)</i></case>
+                                                <case value="3"><i>(国资)</i></case>
+                                                <case value="4"><i>(风投)</i></case>
+                                            </switch>
+                                            <!-- <i>(上市)</i> -->
+                                            <eq name="equity.bigBoss" value="$vo3.name">
+                                                <img src="/bdt/mobile/images/important.png" alt="标注">
+                                            </eq>
+                                            </span>
+                                            <p>持股比例:<notempty name="vo3.number"><i>{$vo3.number}%</i></notempty></p>
+                                            <notempty name="vo3.child">
+                                                <div class="blocks">
+                                                    <i class="exchange"></i>
+                                                </div>
+                                            </notempty>
+                                    </div>
+                                    
+                                    <volist name="vo3.child" id="vo4">
+                                        <div class="degree5">
+                                            <div class="company company5">
+                                                <span class="figure"></span>
+                                                <span class="first_firm">{$vo4.name}
+                                                <switch name="vo4['background']">
+                                                    <case value="1"><i>(银行)</i></case>
+                                                    <case value="2"><i>(上市)</i></case>
+                                                    <case value="3"><i>(国资)</i></case>
+                                                    <case value="4"><i>(风投)</i></case>
+                                                </switch>
+                                                <!-- <i>(上市)</i> -->
+                                                <eq name="equity.bigBoss" value="$vo4.name">
+                                                    <img src="/bdt/mobile/images/important.png" alt="标注">
+                                                </eq>
+                                                </span>
+                                                <p>持股比例:<notempty name="vo4.number"><i>{$vo4.number}%</i></notempty></p>
+                                                <notempty name="vo4.child">
+                                                    <div class="blocks">
+                                                        <i class="exchange"></i>
+                                                    </div>
+                                                </notempty>
+                                            </div> 
+                                        </div>   
+                                    </volist>
+                                </div>
+                                </volist>
+                            </div>
+                        </volist>
+                        </div>                        
+                    </volist>
+                </div>
+            </volist>
+        </empty>
+  
+        </div>
+   </div>
+  
+ 
+
+   
+   <script type='text/javascript' src='/bdt/mobile/reponse.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+   <script>
+       $(function(){
+        console.log({:json_encode($equity)})
+           //点击层级显示与隐藏
+           topClass()
+         function topClass(){
+            $('.blocks').on('click',function(){
+                if($(this).find('.exchange').hasClass('hide_angle')){
+                   $(this).parent().nextAll().hide();
+                   $(this).find('.exchange').removeClass('hide_angle');
+                   $(this).parent().nextAll().find('.blocks .exchange').removeClass('hide_angle');
+                }else{
+                    $(this).parent().nextAll().show();
+                    $(this).find('.exchange').addClass('hide_angle');
+                }  
+         })
+
+         
+         }
+       })
+   </script>
+</body>
+</html>

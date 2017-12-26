@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>平台</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="sm.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="plateform">
+   <div>
+       <div class="page">
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <div class="rowPic">
+                    <img src="images/plate.png" alt="" class="indexImg">
+                    <img src="images/show.png" alt="" class="show">
+                </div>
+                <div class="showNav" id="navation">
+                    <div class="bar bar-tab navation">
+                            <a class="tab-item external " href="index.html">
+                                <span class="icon"><img src="images/indexOld.png" alt=""></span>
+                                <span class="tab-label">打听</span>
+                            </a>
+                            <a class="tab-item external" href="qingbao.html">
+                                <span class="icon"><img src="images/message.png" alt=""></span>
+                                <span class="tab-label">情报</span>
+                            </a>
+                            <a class="tab-item external active" href="pingtai.html">
+                                <span class="icon"><img src="images/plateformNew.png" alt=""></span>
+                                <span class="tab-label">平台</span>
+                            </a>
+                            <a class="tab-item external" href="pingji.html">
+                                <span class="icon"><img src="images/find.png" alt=""></span>
+                                <span class="tab-label">发现</span>
+                            </a>
+                            <a class="tab-item external" href="gengduo.html">
+                                <span class="icon"><img src="images/more.png" alt=""></span>
+                                <span class="tab-label">更多</span>
+                            </a>
+                    </div>
+                    <div class="upImg">
+                        <img src="images/up.png" alt="" >
+                    </div>
+                </div>
+                <div class="bar bar-tab leader">
+                    <a class="tab-item external" href="pingji.html">
+                        <span class="icon"><img src="images/platform0.png" alt=""></span>
+                        <span class="tab-label">综合评级</span>
+                    </a>
+                    <a class="tab-item external" href="chedai.html">
+                        <span class="icon"><img src="images/platform1.png" alt=""></span>
+                        <span class="tab-label">车贷排行</span>
+                    </a>
+                    <a class="tab-item external" href="huoqipaihang.html">
+                        <span class="icon"><img src="images/platform2.png" alt=""></span>
+                        <span class="tab-label">活期排行</span>
+                    </a>
+                    <a class="tab-item external" href="rank.html">
+                        <span class="icon"><img src="images/platform3.png" alt=""></span>
+                        <span class="tab-label">存管平台</span>
+                    </a>  
+                    <a class="tab-item external" href="problems.html">
+                        <span class="icon"><img src="images/platform4.png" alt=""></span>
+                        <span class="tab-label">问题平台</span>
+                    </a>
+                </div> 
+                <div class="content-padded">
+                    <div class="row firsts">
+                        <div class="col-70">我的关注</div>
+                        <a class="col-30" href="searchFor.html">关注更多<img src="images/href.png" alt=""></a>
+                    </div>
+                    <div class="lists">
+                        <!-- 已关注 -->
+                        <div class="row">
+                                <div class="pic col-13"></div>
+                                <div class="list col-87">
+                                    <div class="store">
+                                        <div class="first">
+                                            <span>一两理财</span>
+                                            <span>上市系</span>
+                                            <span>存管</span>
+                                            <p>年化收益:<i>8.00%~12.00%</i></p>
+                                        </div>
+                                    </div> 
+                                    <div class="address">浙江，杭州</div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="pic col-13"></div>
+                                <div class="list col-87">
+                                    <div class="store">
+                                        <div class="first">
+                                            <span>一两理财</span>
+                                            <span>上市系</span>
+                                            <span>存管</span>
+                                            <p>年化收益:<i>8.00%~12.00%</i></p>
+                                        </div>
+                                    </div> 
+                                    <div class="address">浙江，杭州</div>
+                                </div>
+                            </div>
+                            <!-- 未关注 -->
+                            <!-- <div class="no_concern">
+                                <img src="images/No_search.png" alt="">
+                                <div class="concern">你还没有关注的平台</div>
+                                <a class="buttons" href="searchFor.html">去关注</a>
+                            </div> -->
+                        </div>
+                    
+                    </div>
+                    
+                </div>       
+            </div>
+        </div>
+   </div>
+  
+   <script type='text/javascript' src='reponse.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+   <script>
+        $(function(){
+            $('.show').click(function(){
+               $('.leader').css('margin-top','4.175'+'rem');
+               $('.content-padded').css('margin-top','8.3'+'rem')
+                $('.showNav').show();
+            })
+            $('.upImg img').click(function(){
+               $('.showNav').hide();
+               $('.content-padded').css('margin-top','4.7'+'rem')
+               $('.leader').css('margin-top','0'+'rem');
+              
+            })
+        })
+      </script>
+</body>
+</html>

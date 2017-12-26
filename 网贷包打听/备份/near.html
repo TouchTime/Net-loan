@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网贷包打听-网贷琅琊阁_最快最全的P2P网贷查询平台</title>
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta name="keywords" content="P2P网贷,P2P理财,P2P网贷平台排名,网贷平台">
+    <meta name="description" content="网贷包打听是一家专注P2P网贷理财行业的查询网站，旨在为用户提供最快最全的P2P网贷查询服务，网贷平台、网贷行业实时资讯一手掌握，为您的理财投资之路保驾护航。">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="http://m.sui.taobao.org/favicon.ico">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="/bdt/mobile/main.css">
+    <link rel="stylesheet" href="/bdt/mobile/sm.css">
+</head>
+<body class="searchFor">
+   <div>
+       <div class="page">
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <div class="bar">
+                    <div class="searchbar">
+                        <a class="searchbar-cancel tab-item external" href="http://m.wangdaibdt.com/">取消</a>
+                        <div class="search-input">
+                        <label class="icon icon-search" for="search"></label>
+                        <input type="search" id='search' placeholder='请输入平台名称'/>
+                        </div>
+                    </div>
+                </div>
+                <div class="result">
+                    <empty name="near">
+                        <!-- 搜索不到 -->
+                        <div class="find">
+                        <img src="/bdt/mobile/images/no_plateform.png" alt="搜索不到图标">
+                        </div>
+                    <else/>
+                        <!-- 模糊搜索得到 -->
+                        <div class="line"></div>
+                    
+                            <foreach name="near" item="vo">
+                                <a class="button-link button-nav haveData" href="http://m.wangdaibdt.com/pinfo/{$vo.ptid}.html">
+                                    <div class="row">
+                                        <div class="pic col-13">
+                                            <img src="{$vo.logo}" alt="平台图片">
+                                        </div>
+                                        <div class="list col-87">
+                                            <div class="store">
+                                                <div class="first">
+                                                    <span>{$vo.name}</span>
+                                                    <if condition="$vo['background'] neq 5">
+                                                        <span class="list_style">{$vo['bg_array'][0]['name']}</span>
+                                                    </if>
+                                                    <if condition="$vo.cgid neq 0">
+                                                        <span class="banked">存管</span>
+                                                    </if>
+                                                    <p>年化收益:<i>{$vo.apr_min}%~{$vo.apr_max}%</i></p>
+                                                </div>
+                                            </div> 
+                                            <div class="address">{$vo.sheng},{$vo.shi}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </foreach>
+                    </empty>
+                </div>
+            </div>
+       </div>
+   </div>
+  
+ 
+
+   <script type='text/javascript' src='/bdt/mobile/reponse.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+  <script>
+      $(function(){
+          //输入搜索
+          console.log({:json_encode($near)})
+          request ();
+          function request (){
+             $('input').live('input propertychange', function(){
+                $('.result').html('');
+                var str = $('input').val();
+                $.ajax({
+                type: "POST", 
+                url: "http://m.wangdaibdt.com/index_pc.php/Main/ptSearch_b",
+                data:{str:str},
+                success: function(data) {
+                    
+                if(data.r){ 
+                    if(data.data){
+                        if(str == data.data[0].name){ 
+                        //可以搜到平台
+                        window.location.href = "http://m.wangdaibdt.com/pinfo/"+data.data[0].ptid+".html";
+                       
+                    }else{
+                        window.location.href="http://m.wangdaibdt.com/near.html?str=" + str;
+
+                    }
+                  
+                    }else{
+                        var contents='<div class="find"><img src="/bdt/mobile/images/no_plateform.png" alt="搜索不到图标"></div>';
+                        $('.result').html(contents);
+                    }
+
+                }
+                } 
+              })
+             })
+          }
+
+        
+      })
+  </script>
+</body>
+</html>

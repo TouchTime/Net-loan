@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网贷包打听——股权结构</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="sm.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="equity">
+   <div class="page-group">
+       <div class="page page-current">
+           <header class="bar bar-nav">
+               <a class="icon icon-left pull-left open-panel back" href="details.html"></a>
+               <div class="title">股权结构</div>
+           </header>
+            <!-- 这里是页面内容区 -->
+            <div class="content structure">
+               <div class="controler">
+                   <span>微贷网</span>
+                   <span>疑似实际控制人</span>
+                   <span>(持股比例 <i>60.1098%</i>)</span>
+                   <div class="name">姚宏</div>
+               </div>
+               <div class="label">标注<img src="images/important.png" alt="">为疑似实际股权控制人</div>
+               <div class="super">
+                   <div class="company">
+                        <span class="figure"></span>
+                        <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                        <p>持股比例:<i>90.00%</i></p>
+                        <i class="exchange"></i>
+                    </div>
+                    <div class="company">
+                        <span class="figure"></span>
+                        <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                        <p>持股比例:<i>90.00%</i></p>
+                        <i class="exchange"></i>
+                    </div>
+                    <div class="company">
+                        <span class="figure"></span>
+                        <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                        <p>持股比例:<i>90.00%</i></p>
+                        <i class="exchange"></i>
+                    </div>
+                    <div class="company">
+                        <span class="figure"></span>
+                        <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                        <p>持股比例:<i>90.00%</i></p>
+                        <i class="exchange"></i>
+                    </div>
+                    <div class="company">
+                        <span class="figure"></span>
+                        <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                        <p>持股比例:<i>90.00%</i></p>
+                        <i class="exchange"></i>
+                    </div>
+               </div>
+               <div class="super">
+                    <div class="company">
+                         <span class="figure"></span>
+                         <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                         <p>持股比例:<i>90.00%</i></p>
+                         <i class="exchange"></i>
+                     </div>
+                     <div class="company">
+                         <span class="figure"></span>
+                         <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                         <p>持股比例:<i>90.00%</i></p>
+                         <i class="exchange"></i>
+                     </div>
+                     <div class="company">
+                         <span class="figure"></span>
+                         <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                         <p>持股比例:<i>90.00%</i></p>
+                         <i class="exchange"></i>
+                     </div>
+                     <div class="company">
+                         <span class="figure"></span>
+                         <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                         <p>持股比例:<i>90.00%</i></p>
+                         <i class="exchange"></i>
+                     </div>
+                     <div class="company">
+                         <span class="figure"></span>
+                         <span class="first_firm">杭州仁润科技股份有限公司<i>(上市)</i><img src="images/important.png" alt=""></span>
+                         <p>持股比例:<i>90.00%</i></p>
+                         <i class="exchange"></i>
+                     </div>
+               
+               
+            </div>
+
+           
+        </div>
+   </div>
+  
+ 
+
+   
+   <script type='text/javascript' src='reponse.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+   <script>
+       $(function(){
+           //点击层级显示与隐藏
+           topClass()
+         function topClass(){
+            $('.exchange').on('click',function(){
+                if($(this).hasClass('hide_angle')){
+                   $(this).parent().nextAll().hide();
+                   $(this).removeClass('hide_angle');
+                   $(this).parent().nextAll().find('.exchange').removeClass('hide_angle');
+                }else{
+                    $(this).parent().next().show();
+                    $(this).addClass('hide_angle');
+                }  
+         })
+        
+         }
+       })
+   </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网贷包打听-网贷琅琊阁_最快最全的P2P网贷查询平台</title>
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta name="keywords" content="P2P网贷,P2P理财,P2P网贷平台排名,网贷平台">
+    <meta name="description" content="网贷包打听是一家专注P2P网贷理财行业的查询网站，旨在为用户提供最快最全的P2P网贷查询服务，网贷平台、网贷行业实时资讯一手掌握，为您的理财投资之路保驾护航。">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="http://m.sui.taobao.org/favicon.ico">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="/bdt/mobile/sm.css">
+    <link rel="stylesheet" href="/bdt/mobile/main.css">
+</head>
+<body class="awards problem">
+   <div class="page-group">
+       <div class="page page-current">
+           <header class="bar bar-nav head">
+                <a class="icon icon-left pull-left open-panel back" href="javascript:history.go(-1)"></a>
+               <div class="title">问题平台</div>
+           </header>
+           <div class="buttons-tab list" id="list">
+                <a href="#tab1" class="tab-link button">平台</a>
+                <a href="#tab2" class="tab-link button">问题</a>
+                <a href="#tab3" class="tab-link button">出事时间</a>
+                <a href="#tab2" class="tab-link button">省份</a>
+            </div>
+            <!-- 这里是页面内容区 -->
+            <div class="content  infinite-scroll infinite-scroll-bottom" data-distance="100">
+                <div class="list-container">
+                        
+                </div>
+                <!-- <div class="buttons-tab ranking">
+                    <a href="#tab2" class="tab-link button">中亿华商</a>
+                    <a href="#tab3" class="tab-link button">跑路</a>
+                    <a href="#tab2" class="tab-link button">2017-8-18.6%</a>
+                    <a href="#tab3" class="tab-link button">北京</a>
+                </div> -->
+               
+                 <!-- 加载提示符 -->
+                 <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+        </div>
+   </div>
+  
+ 
+
+   
+   <script type='text/javascript' src='/bdt/mobile/reponse.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+   <script>
+        $(function(){
+          
+           
+        // var tbodyHTML = "";
+        // for(var j = 0; j < dataLists.length; j++ ){
+        //     tbodyHTML+='<div class="buttons-tab ranking"><a href="#tab2" class="tab-link button circle"><span>'+dataLists[j].name+'</span><a href="#tab3" class="tab-link button">'+dataLists
+        //                  [j].questione+'</a><a href="#tab2" class="tab-link button">'+dataLists[j].time+'</a><a href="#tab3" class="tab-link button">'+dataLists[j].province+'</a></div>';
+        
+        // }
+           //滚动加载
+           refresh();
+           function refresh(){
+            var divDom = document.createElement("div");
+            divDom.innerHTML= '<table>' + '<?php  echo  $questionPlatform ;?>' + '<table>';
+            var trDom = divDom.querySelectorAll("tbody tr")
+            var dataLists = []
+            for(var i = 0; i < 450; i ++){
+                dataLists[i] = {}
+                dataLists[i].name = trDom[i].children[0].innerText;
+                dataLists[i].question = trDom[i].children[5].innerText;
+                dataLists[i].time = trDom[i].children[6].innerText;
+                dataLists[i].province = trDom[i].children[2].innerText;
+                dataLists[i].city = trDom[i].children[3].innerText;
+                dataLists[i].company = trDom[i].children[4].innerText;
+                dataLists[i].url = trDom[i].children[1].innerText;
+            }
+             // 加载flag
+             var array = dataLists;
+             console.log(array)
+             var loading = false;
+             // 最多可加载的条目
+             var maxItems = array.length;
+           
+             // 每次加载添加多少条目
+             var itemsPerLoad = 20;
+         
+             function addItems(array,number, lastIndex) {
+                     // 生成新条目的HTML
+                     var html = '';
+                     var style='';
+                     for (var i = lastIndex ; i < lastIndex + number; i++) {
+                
+                        html+='<div class="buttons-tab ranking"><a href="#tab2" class="tab-link button circle"><span>'+dataLists[i].name+'</span><a href="#tab3" class="tab-link button">'+dataLists
+                                [i].question+'</a><a href="#tab2" class="tab-link button">'+dataLists[i].time+'</a><a href="#tab3" class="tab-link button">'+dataLists[i].province+'</a></div>';
+                        
+                     }
+                     // 添加新条目
+                    
+                     $('.infinite-scroll-bottom .list-container').append(html);
+ 
+                 }
+                 //预先加载10条
+             addItems(array,itemsPerLoad, 0);
+ 
+             // 上次加载的序号
+ 
+             var lastIndex = 20;
+ 
+             // 注册'infinite'事件处理函数
+             $(document).on('infinite', '.infinite-scroll-bottom',function() {
+                 // 如果正在加载，则退出
+                 if (loading) return;
+ 
+                 // 设置flag
+                 loading = true;
+ 
+                 // 模拟1s的加载过程
+                 setTimeout(function() {
+                     // 重置加载flag
+                     loading = false;
+ 
+                     if (lastIndex >=maxItems) {
+                         // 加载完毕，则注销无限加载事件，以防不必要的加载
+                         $.detachInfiniteScroll($('.infinite-scroll'));
+                         // 删除加载提示符
+                         $('.infinite-scroll-preloader').remove();
+                         return;
+                     }
+ 
+                     // 添加新条目
+                     addItems(array,itemsPerLoad, lastIndex);
+                     // 更新最后加载的序号
+                     lastIndex = $('.list-container .ranking').length;
+                     console.log(lastIndex)
+                     //容器发生改变,如果是js滚动，需要刷新滚动
+                     $.refreshScroller();
+                 }, 1000);
+             });
+             $.init();
+ 
+           }
+
+          
+           //ios上移高度
+        //    open()
+           function open() {
+            //  $('.awards header').hide();
+            //  $('body').css('top','-2.2'+'rem');
+           document.getElementsByClassName('head')[0].style.display = 'none';
+           document.body.style.top = '-2.2rem';
+           return 2;
+           }
+
+
+           isApp();
+       function isApp(){
+        if(location.href.split('?')[1] == 'isApp=true'){
+            $('.awards header').hide();
+             $('body').css('top','-2.2'+'rem');
+            
+        }
+       }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <urlset>
+    <url>
+      <loc>http://www.wangdaibdt.com/ </loc>
+      <data>
+        <display>
+          <pc_url_pattern>http://www.wangdaibdt.com/(\w+)/(\d+).html</pc_url_pattern>
+          <xhtml_url_pattern >http://m.wangdaibdt.com/(\w+)/(\d+).html</xhtml_url_pattern>
+        </display>
+      </data>
+    </url>
+    <url>
+      <loc>http://www.wangdaibdt.com/ </loc>
+      <data>
+        <display>
+          <pc_url_pattern>http://www.wangdaibdt.com/(\w+).html</pc_url_pattern>
+          <xhtml_url_pattern >http://m.wangdaibdt.com/${1}.html</xhtml_url_pattern>
+          <xhtml_url_pattern >http://m.wangdaibdt.com/${1}.html?isApp=false</xhtml_url_pattern>
+        </display>
+      </data>
+    </url>
+    <url>
+      <loc>http://www.wangdaibdt.com/ </loc>
+      <data>
+        <display>
+          <pc_url_pattern>http://www.wangdaibdt.com/(\w+).html</pc_url_pattern>
+          <xhtml_url_pattern >http://m.wangdaibdt.com/${1}.html</xhtml_url_pattern>
+        </display>
+      </data>
+    </url>
+
+    <url>
+      <loc>http://www.wangdaibdt.com/ </loc>
+      <data>
+        <display>
+          <pc_url_pattern>http://www.wangdaibdt.com/near\.html\?str=(^[a-zA-Z0-9_\u4e00-\u9fa5]+$)</pc_url_pattern>
+          <xhtml_url_pattern >http://m.wangdaibdt.com/near.html?str=${1}</xhtml_url_pattern>
+        </display>
+      </data>
+    </url>
+  </urlset>

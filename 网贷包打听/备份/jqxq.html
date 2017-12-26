@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网贷包打听-网贷琅琊阁_最快最全的P2P网贷查询平台</title>
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta name="keywords" content="P2P网贷,P2P理财,P2P网贷平台排名,网贷平台">
+    <meta name="description" content="网贷包打听是一家专注P2P网贷理财行业的查询网站，旨在为用户提供最快最全的P2P网贷查询服务，网贷平台、网贷行业实时资讯一手掌握，为您的理财投资之路保驾护航。">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="http://m.sui.taobao.org/favicon.ico">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="/bdt/mobile/main.css">
+    <link rel="stylesheet" href="/bdt/mobile/sm.css">
+</head>
+<body class="activity">
+   <div>
+       <div class="page">
+           <header class="bar bar-nav">
+               <a class="icon icon-left pull-left open-panel back" href="http://m.wangdaibdt.com/jieqian.html"></a>
+               <div class="title">借点钱详情</div>
+           </header>
+            <!-- 这里是页面内容区 -->
+            <div class="content detailed">
+                 <div class="banner">
+                     <img src="{$data.logo}" alt="平台图片">
+                     <span>{$data.name}</span>
+                 </div> 
+                 <div class="record row">
+                     <div class="col-33">{$data.day_apr}%</div>
+                     <div class="col-33">{$data.max_limit}</div>  
+                     <div class="col-33">{$data.give_money_time}</div>  
+                 </div>
+                 <div class="init row">
+                    <div class="col-33">日利率</div>
+                    <div class="col-33">最高额度</div>  
+                    <div class="col-33">最快放款时间</div>  
+                 </div>
+                 <div class="message">
+                     <div>所需材料</div>
+                     <div>{$data.need}</div>
+                    
+                 </div>
+                 <p><a href="{$data.pc_url}" class="button button-fill  tab-item external">立即申请</a></p>
+            </div>
+        </div>
+   </div>
+  
+ 
+
+   
+   <script type='text/javascript' src='/bdt/mobile/reponse.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+   <script>
+       //android
+       isApp();
+       function isApp(){
+        if(location.href.split('&')[1] == 'isApp=true'){
+             $('header').hide();
+             $('body').css('top','-2.2rem')
+        }
+       }
+   </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <style>
+      .first{
+          background:red;
+      }
+      .second{
+          background:green;
+      }
+      .list1{
+          background:yellow;
+      }
+      .list2{
+          background:blue;
+      }
+      .list3{
+         background:greenyellow;
+      }
+    </style>
+</head>
+<body>
+   <div class="page-group">
+       <div class="page page-current">
+           <!-- 标题栏 -->
+        <header class="bar bar-nav">
+             <h1 class="title">栅格</h1>
+        </header>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="content-paded grid-demo">
+                <div class="row">
+                    <div class="col-50 first">50%</div>
+                    <div class="col-50 second">50%</div>
+                </div>
+                <div class="row">
+                    <div class="col-33 list1">33%</div>
+                    <div class="col-33 list2">33%</div>
+                    <div class="col-33 list3">33%</div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <p><a href="#" class="alert-text">点击文本</a></p>
+                <p><a href="#" class="alert-text-title">点击文本标题</a></p>
+                <p><a href="#" class="alert-text-title-callback">点击文本标题并返回</a></p>
+                <p><a href="#" class="alert-text-callback">点击文本返回</a></p>
+                <p><a href="#" class="prompt-ok">prompt with text and ok callback</a></p>
+                <p><a href="#" class="prompt-ok-cancel">prompt with text,title and ok</a></p>
+                <p><a href="#" class="open-preloader">加载</a></p>
+                
+            </div>
+        </div>
+        
+       </div>
+   </div>
+  
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+   <script>  
+       $(function(){
+        $(document).on('click','.alert-text',function () {
+           $.alert('Here goes alert text');
+        });
+   
+       $(document).on('click','.alert-text-title', function () {
+           $.alert('Here goes alert text', 'Custom Title!');
+       });
+   
+       $(document).on('click', '.alert-text-title-callback',function () {
+           $.alert('Here goes alert text', 'Custom Title!', function () {
+               $.alert('Button clicked!');
+           });
+       });
+   
+       $(document).on('click', '.alert-text-callback',function () {
+           $.alert('Here goes alert text', function () {
+               $.alert('Button clicked!');
+           });
+       });
+       $(document).on('click','.prompt-ok', function () {
+           $.prompt('What is your name?',function(value){
+               $.alert('Your name is "'+value+'". You clicked Ok button')
+           })
+       });
+       $(document).on('click','.open-preloader', function(){
+           $.showPreloader();
+           setTimeout(function() {
+               $.hidePreloader();
+           },2000);
+       })
+     })
+   </script>
+</body>
+</html>

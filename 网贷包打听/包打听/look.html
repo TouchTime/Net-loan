@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="sm.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="http://www.swiper.com.cn/dist/css/swiper.min.css">
+    <style>
+    body{
+        background:#f7f7f7;
+    }
+    p{
+        margin:0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 3.875rem;
+        margin: 20px auto;
+    }
+    .swiper-slide{
+        width: 4.225rem!important;
+
+    }
+    .swiper-slide img{
+        text-align: center;
+        font-size: 18px;
+        margin-right: .5rem;
+        width: 3.725rem;
+        height:3.875rem;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+   .look .content{
+       padding-left:.75rem;
+       font-size:.65rem;
+       color:#333;
+       background:#fff;
+      
+   }
+   .look .intro{
+        padding: .7rem 0 .7rem 0;
+        background: #fff;
+        margin-right: .75rem;
+        border-bottom: 1px solid #e9edf0;
+      
+   }
+   .look .select{
+    margin-top: .75rem;
+   }
+   .line{
+       background: #f7f7f7;
+       height:.5rem;
+       margin-left:-.75rem;
+   }
+   
+    </style>
+</head>
+<body class="look">
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="intro">
+                <p>微贷网是为有资金需求和投资需求的用户完美搭建互动服务平台，为公众提供低风险、高回报、多样化的投资产品的网站。</p>
+                <p>2011年5月2日，微贷网宣布获得10亿元c轮融资。领投方为嘉御基金，跟投方分别是中信建投资本以及上市公司东易日盛。</p>
+            </div>
+            <div class="address">
+                <div class="select">
+                    公司地址：杭州市市江干区解放东路33号
+                </div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                    <div class="swiper-slide"><img src="https://www.youjin360.com/do.php?c=0199&id=a4349122-1e5b-11e7-8208-00163e131549" alt="公司图片"></div>
+                </div>
+            </div>
+            <div class="line"></div>
+       </div>
+
+   
+   <script type='text/javascript' src='reponse.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+   <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+   <script charset='utf-8' src="http://www.swiper.com.cn/dist/js/swiper.min.js"></script>
+   <script type='text/javascript' src='index.js' charset='utf-8'></script>
+   <script>
+      $(function(){
+          //融资情况的银行显示与隐藏
+          clickStatus ();
+          function clickStatus () {
+            $(".show_angle").on("click", function(){
+                $(this).parents('.financing-list').find(".col-100").toggle();
+                $(this).toggleClass('hide_angle');
+            })  
+          }
+          
+          //运营团队点击看到全部
+          clickAll();
+          function clickAll (){
+              $('.u-arrow').on('click',function(){
+                  $(this).siblings().toggleClass('ellipse');
+                  $(this).toggleClass('hide_angle');
+              })
+          }
+        
+
+        //swiper
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 4,
+            // centeredSlides: true,
+            paginationClickable: true,
+            // spaceBetween: 20
+        });
+      })
+   </script>
+</body>
+</html>
